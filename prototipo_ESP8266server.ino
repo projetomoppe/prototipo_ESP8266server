@@ -89,11 +89,7 @@ void setup()
 } // fecha void setup()
 
 void loop()
-{
-  // debug only
-  digitalWrite(S1, HIGH);
-  digitalWrite(S2, LOW);
-  
+{ 
   // obtencao dos dados
   icos_inf     = digitalRead(S1); // leitura do sensor ICOS inferior
   icos_sup     = digitalRead(S2); // leitura do sensor ICOS superior
