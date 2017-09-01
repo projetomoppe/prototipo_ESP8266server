@@ -7,11 +7,11 @@ O projeto tem como intuito construir um dispositivo para monitoramento de nível
 Para que o desenvolvimento e implementação do protótipo acontecesse, foi realizada uma pesquisa de componentes e sistemas embarcados para saber qual seria mais viável para o projeto, e o Arduino foi o que mais atendeu às nossas necessidades.
 
 ### Componentes
-Arduino Mega 2560;
-2 Sensores ICOS LA16M40;
-Sensor ultrassônico HC-SR04;
-Módulo GPS GY-NEO6MV2;
-Módulo Wifi RF NFR24L01
+Arduino Mega 2560;                                                                                                          
+2 Sensores ICOS LA16M40;                                                                                                
+Sensor ultrassônico HC-SR04;                                                                                    
+Módulo GPS GY-NEO6MV2;                                                                                    
+Módulo Wifi RF NFR24L01.                                                                                       
 
 ## Pinagem dos dispositivos
 
