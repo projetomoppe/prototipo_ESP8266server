@@ -11,7 +11,7 @@ Arduino Mega 2560;
 2 Sensores ICOS LA16M40;                                                                                                
 Sensor ultrassônico HC-SR04;                                                                                    
 Módulo GPS GY-NEO6MV2;                                                                                    
-Módulo Wifi RF NFR24L01.                                                                                       
+Módulo Wifi ESP2866.                                                                                       
 
 ## Pinagem dos dispositivos
 
