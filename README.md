@@ -19,23 +19,23 @@ em linguagem C de programação, podem ser exibidos no Serial Monitor ou enviado
 
 Sensores ICOS:                                                                                                            
 ```
-sensor1 - pino de dados 4 e 5v.                                                                                           
+sensor1 - pino de dados 4 e 5v.                                           
 sensor2 - pino de dados 3 e 5v.
 ```
 
 
 Sensor ultrassônico:                                                                                                        
 ```
-pino 12 - ligação do pino ECHO.                                                                                           
-pino 13 - ligação do pino TRIGGER.                                                                                         
+pino 12 - ligação do pino ECHO.                                                           
+pino 13 - ligação do pino TRIGGER.                                   
 pino GND.
 pino 5v.
 ```
 
 Módulo GPS:                                                                                                               
 ```
-portas serial RX3 e TX3 para comunicação.                                                                                   
-porta GND.                                                                                                                  
+portas serial RX3 e TX3 para comunicação.                                                  
+porta GND.                                                         
 alimentação com divisor de tensão para 3v(pino vcc com 2 resistores, 4.7k e 10k).
 ```
 
