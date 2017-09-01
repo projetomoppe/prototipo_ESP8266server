@@ -18,16 +18,19 @@ em linguagem C de programação, podem ser exibidos no Serial Monitor ou enviado
 ## Pinagem dos dispositivos
 
 Sensores ICOS:
-sensor1 = 4;
-sensor2 = 3;
+sensor1 - pino de dados 4 e 5v.
+sensor2 - pino de dados 3 e 5v.
 
 Sensor ultrassônico:
-pino ECHO = 12;
-pino TRIG = 13;
+pino 12 - ECHO.
+pino 13 - TRIG.
+pino GND.
+pino 5v.
 
 Módulo GPS:
-
-
+portas serial3 para comunicação.
+porta GND.
+alimentação com divisor de tensão para 3v(pino vcc com 2 resistores, 4.7k e 10k).
 
 ## Construído com
 
