@@ -97,13 +97,13 @@ Funções utilizadas:
 
 static const uint32_t GPSB = 9600; // definindo a velocidade de comunicação do módulo GPS.
 
-gps.location.isUpdated() // Se os dados do GPS forem vaildos.
+gps.location.isUpdated() // Se os dados do GPS forem atualizados.
 
-gps.location.isValid() // valida os dados do GPS.
+gps.location.isValid() // se localização for válido.
 
-gps.date.isValid()
+gps.date.isValid() // se data for válida.
 
-gps.time.isValid()
+gps.time.isValid() // se tempo for válido.
 
 logData(ID_dispositivo, icos_inf, icos_sup, nivel); // registrar os dados do GPS
 
