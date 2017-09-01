@@ -46,9 +46,21 @@ bool 	releaseTCP (uint8_t mux_id) : Libere a conexão TCP no modo múltiplo.
 
 String 	getIPStatus (void) : Obtenha o status atual da conexão (UDP e TCP).
 
-### Break down into end to end tests
+#define SSID     "moppe_wireless" : Define o nome do ponto de acesso(wifi) que será utilizado.
 
-Explain what these tests test and why
+#define PASSWORD "Moppe123JAC12" : Senha do ponto de acesso(wifi).
+
+### Biblioteca NewPing
+
+Funções utilizadas:
+
+NewPing us(TRIG, ECHO);
+
+### Biblioteca TinyGPS
+
+Funções utilizadas:
+
+static const uint32_t GPSB = 9600; // definindo a velocidade de comunicação do módulo GPS.
 
 ```
 Give an example
