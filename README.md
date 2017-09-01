@@ -6,14 +6,12 @@ O projeto tem como intuito construir um dispositivo para monitoramento de nível
 
 Para que o desenvolvimento e implementação do protótipo acontecesse, foi realizada uma pesquisa de componentes e sistemas embarcados para saber qual seria mais viável para o projeto, e o Arduino foi o que mais atendeu às nossas necessidades.
 
-### Pré-requisitos
-
-Para o protótipo ser construído, foi necessário alguns componentes para o Arduino chamados Shields. os Shields, são componentes ligados diretamente à ele, com diversas finalidades, tais como: medir a distância a partir de ondas sonoras que é feita pelo sensor ultrassônico, etc.
-
-```
-Os sensores ou Shields, fazem a leitura dos dados, que são enviados ao Arduino que por meio de códigos
-em linguagem C de programação, podem ser exibidos no Serial Monitor ou enviados para outro lugar.
-```
+### Componentes
+Arduino Mega 2560;
+2 Sensores ICOS LA16M40;
+Sensor ultrassônico HC-SR04;
+Módulo GPS GY-NEO6MV2;
+Módulo Wifi RF NFR24L01
 
 ## Pinagem dos dispositivos
 
@@ -34,12 +32,18 @@ pino 5v.
 
 Módulo GPS:                                                                                                               
 ```
-portas serial RX3 e TX3 para comunicação.                                                  
-porta GND.                                                         
-alimentação com divisor de tensão para 3v(pino vcc com 2 resistores, 4.7k e 10k).
+portas serial RX3 e TX3 para comunicação. pino RX3 com divisor de tensão para 3.3v, com 2 resistores(4.7k e 10k).
+porta GND. 
+pino 5v.
 ```
 
-Módulo Wifi:                                                                                                                
+Módulo Wifi:
+```
+pino RX direto ao divisor de tensão e pino TX.
+pinos RST e CH_PD ligados a um resistor de 1K, que vai para o pino 3.3v.
+porta GND.
+porta 3.3v.
+```
 
 
 ## Construído com
@@ -81,13 +85,27 @@ String 	getIPStatus (void) : Obtenha o status atual da conexão (UDP e TCP).
 
 Funções utilizadas:
 
-NewPing us(TRIG, ECHO);
+NewPing us(TRIG, ECHO); // inicia o sensor nas portas.
 
-### Biblioteca TinyGPS
+dados_su(); // obtencao do nivel dado pelo sensor ultrassonico
+
+us.ping_cm() // conversao para cm.
+
+### Biblioteca TinyGPS Plus
 
 Funções utilizadas:
 
 static const uint32_t GPSB = 9600; // definindo a velocidade de comunicação do módulo GPS.
+
+gps.location.isUpdated() // Se os dados do GPS forem vaildos.
+
+gps.location.isValid() // valida os dados do GPS.
+
+gps.date.isValid()
+
+gps.time.isValid()
+
+logData(ID_dispositivo, icos_inf, icos_sup, nivel); // registrar os dados do GPS
 
 ### Funções dos dispositivos
 
