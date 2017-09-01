@@ -15,6 +15,20 @@ Os sensores ou Shields, fazem a leitura dos dados, que são enviados ao Arduino 
 em linguagem C de programação, podem ser exibidos no Serial Monitor ou enviados para outro lugar.
 ```
 
+## Pinagem dos dispositivos
+
+Sensores ICOS:
+sensor1 = 4;
+sensor2 = 3;
+
+Sensor ultrassônico:
+pino ECHO = 12;
+pino TRIG = 13;
+
+Módulo GPS:
+
+
+
 ## Construído com
 
 https://github.com/itead/ITEADLIB_Arduino_WeeESP8266 - weeESP8266 utilizada no módulo wifi.
