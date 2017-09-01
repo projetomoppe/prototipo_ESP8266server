@@ -32,6 +32,9 @@ portas serial RX3 e TX3 para comunicação.
 porta GND.                                                                                                                  
 alimentação com divisor de tensão para 3v(pino vcc com 2 resistores, 4.7k e 10k).
 
+Módulo Wifi:                                                                                                                
+
+
 ## Construído com
 
 https://github.com/itead/ITEADLIB_Arduino_WeeESP8266 - weeESP8266 utilizada no módulo wifi.
@@ -63,9 +66,9 @@ bool 	releaseTCP (uint8_t mux_id) : Libere a conexão TCP no modo múltiplo.
 
 String 	getIPStatus (void) : Obtenha o status atual da conexão (UDP e TCP).
 
-#define SSID     "moppe_wireless" : Define o nome do ponto de acesso(wifi) que será utilizado.
+#define SSID  "moppe_wireless" : Define o nome do ponto de acesso(wifi) que será utilizado.
 
-#define PASSWORD "Moppe123JAC12" : Senha do ponto de acesso(wifi).
+#define PASSWORD  "Moppe123JAC12" : Senha do ponto de acesso(wifi).
 
 ### Biblioteca NewPing
 
@@ -79,27 +82,12 @@ Funções utilizadas:
 
 static const uint32_t GPSB = 9600; // definindo a velocidade de comunicação do módulo GPS.
 
+### Funções dos dispositivos
 
-## Contributing
+Sensores ICOS: medir nível de acordo com seu estado que varia entre 0 e 1. À medida que o nível sobe, passa pelo sensor, mudando seu estado. O sensor pode estar normalmente aberto(0) ou normalmente fechado(1).
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Sensor ultrassônico: medir nível com ondas sonoras que rebatem na água e mostra exatamente a altura do nível. Também é possível medir a velocidade em que o nível sobe para assim realizar uma estitamita de tempo em que o nível subirá até um nível crítico.
 
-## Versioning
+Módulo GPS: exibir a localização do protótipo e mostrar dados como data e hora.
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+Módulo Wifi: enviar os dados lidos pelos dispositivos para um servidor, onde serão exibidos num website para que qualquer pessoa tenha acesso aos dados lidos em tempo real.
