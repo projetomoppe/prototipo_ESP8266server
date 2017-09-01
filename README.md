@@ -22,13 +22,13 @@ sensor1 - pino de dados 4 e 5v.
 sensor2 - pino de dados 3 e 5v.
 
 Sensor ultrassônico:
-pino 12 - ECHO.
-pino 13 - TRIG.
+pino 12 - ligação do pino ECHO.
+pino 13 - ligação do pino TRIGGER.
 pino GND.
 pino 5v.
 
 Módulo GPS:
-portas serial3 para comunicação.
+portas serial RX3 e TX3 para comunicação.
 porta GND.
 alimentação com divisor de tensão para 3v(pino vcc com 2 resistores, 4.7k e 10k).
 
@@ -79,27 +79,6 @@ Funções utilizadas:
 
 static const uint32_t GPSB = 9600; // definindo a velocidade de comunicação do módulo GPS.
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
